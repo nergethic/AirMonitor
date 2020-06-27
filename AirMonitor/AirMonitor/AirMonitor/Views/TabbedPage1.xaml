@@ -1,12 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AirMonitor.Views.TabbedPage1"
              xmlns:pages="clr-namespace:AirMonitor.Views"
-             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
-    <pages:HomePage Title="Home"/>
-    <pages:SettingsPage Title="Settings"/>
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             BarBackgroundColor="Azure"
+            >
+    <NavigationPage Title="Home" IconImageSource="baseline_home_black_24">
+        <x:Arguments>
+            <pages:HomePage/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Settings" IconImageSource="baseline_settings_black_24">
+        <x:Arguments>
+            <pages:SettingsPage/>
+        </x:Arguments>
+    </NavigationPage>
 </TabbedPage>

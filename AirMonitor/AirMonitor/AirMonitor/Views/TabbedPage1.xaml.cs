@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+//using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+
 namespace AirMonitor.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -15,6 +17,8 @@ namespace AirMonitor.Views
         public TabbedPage1()
         {
             InitializeComponent();
+            
+            //On<Xamarin.Forms.PlatformConfiguration.Android>().Set
         }
     }
 }
