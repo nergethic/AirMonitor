@@ -7,6 +7,11 @@ namespace AirMonitor
 {
     public partial class App : Application
     {
+        public static string AirlyApiKey { get; private set; }
+        public static string AirlyApiUrl { get; private set; }
+        public static string AirlyApiMeasurementUrl { get; private set; }
+        public static string AirlyApiInstallationUrl { get; private set; }
+
         public App()
         {
             InitializeComponent();
