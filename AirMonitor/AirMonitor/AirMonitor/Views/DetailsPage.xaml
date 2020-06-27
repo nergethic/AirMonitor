@@ -24,7 +24,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span
-                                    Text="0"
+                                    Text="{Binding CaqiValue}"
                                     Style="{StaticResource CaqiValueSpanStyle}"/>
                                 <Span
                                     Text="{x:Static x:Environment.NewLine}"/>
@@ -36,8 +36,10 @@
                     </Label>
                 </Frame>
                 <Label
+                    Text="{Binding CaqiTitle}"
                     Style="{StaticResource CaqiTitleStyle}"/>
                 <Label
+                    Text="{Binding CaqiDescription}"
                     Style="{StaticResource CaqiDescriptionStyle}"/>
 
                 <BoxView Style="{StaticResource HorizontalSeparatorStyle}"/>
@@ -54,13 +56,13 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <Span
-                                            Text="34"
+                                            Text="{Binding Pm25Value}"
                                             Style="{StaticResource NormalTextSpanStyle}"/>
                                         <Span
                                             Text=" mg/m3 "
                                             Style="{StaticResource SmallTextSpanStyle}"/>
                                         <Span
-                                            Text="0"
+                                            Text="{Binding Pm25Percent, StringFormat='({0}%)'}"
                                             Style="{StaticResource NormalTextSpanStyle}"/>
                                     </FormattedString>
                                 </Label.FormattedText>
@@ -81,13 +83,13 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <Span
-                                            Text="10"
+                                            Text="{Binding Pm10Value}"
                                             Style="{StaticResource NormalTextSpanStyle}"/>
                                         <Span
                                             Text=" mg/m3 "
                                             Style="{StaticResource SmallTextSpanStyle}"/>
                                         <Span
-                                            Text="10"
+                                            Text="{Binding Pm10Percent, StringFormat='({0}%)'}"
                                             TextColor="Black"
                                             FontSize="20"/>
                                     </FormattedString>
@@ -104,10 +106,10 @@
                     <controls:ContentWithHeader.ControlContent>
                         <StackLayout>
                             <Label
-                                Text="0"
+                                Text="{Binding HumidityValue, Converter={StaticResource ValueToPercent}, StringFormat='{0}%'}"
                                 Style="{StaticResource NormalTextLabelStyle}"/>
                             <Slider
-                                Value="0"
+                                Value="{Binding HumidityValue}"
                                 Style="{StaticResource SliderStyle}"/>
                         </StackLayout>
                     </controls:ContentWithHeader.ControlContent>
@@ -119,7 +121,7 @@
                     <controls:ContentWithHeader.ControlContent>
                         <StackLayout>
                             <Label
-                                Text="0"
+                                Text="{Binding PressureValue, StringFormat='{0} hPa'}"
                                 Style="{StaticResource NormalTextLabelStyle}"/>
                             <Slider
                                 Maximum="1100"
