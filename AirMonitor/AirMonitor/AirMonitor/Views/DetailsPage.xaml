@@ -7,12 +7,18 @@
              x:Class="AirMonitor.Views.DetailsPage"
              xmlns:controls="clr-namespace:AirMonitor.Views.Controls"
              xmlns:converters="clr-namespace:AirMonitor.Converters"
+             xmlns:viewModels="clr-namespace:AirMonitor.ViewModels"
+             Title="Details Page"
              Style="{StaticResource DetailsPageStyle}">
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:ValueToPercentConverter x:Key="ValueToPercent"/>
         </ResourceDictionary>
     </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <viewModels:DetailsViewModel/>
+    </ContentPage.BindingContext>
 
     <ScrollView>
         <Grid AutomationId="">
