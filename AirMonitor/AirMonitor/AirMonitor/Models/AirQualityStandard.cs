@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AirMonitor.Models
 {
-    class AirQualityStandard
+    public class AirQualityStandard
     {
     }
 }

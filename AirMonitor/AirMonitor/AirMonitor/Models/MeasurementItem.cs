@@ -4,7 +4,9 @@ using System.Text;
 
 namespace AirMonitor.Models
 {
-    class MeasurementItem
+    public class MeasurementItem
     {
+        public List<MeasurementValue> Values { get; set; }
+        public List<AirQualityIndex> Indexes { get; set; }
     }
 }

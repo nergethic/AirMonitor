@@ -6,5 +6,6 @@ namespace AirMonitor.Models
 {
     class Measurement
     {
+        public MeasurementItem Current { get; set; }
     }
 }
